@@ -176,7 +176,7 @@
       <p style="margin:4px 0 0;font-size:18px;line-height:1.52;text-wrap:pretty">I enjoy the loop: make something, pull it apart, learn what it is doing, then build the next version from the useful pieces.</p>
       <p style="margin:0;font-size:16px;line-height:1.5;text-wrap:pretty">The materials change between product engineering and new-media work. The process does not.</p>
     </div>
-    <div class="sv-process-caption" style="z-index:2"><span>Break / rebuild / repeat</span><span>{{ processPointCount }} points</span></div>
+    <div class="sv-process-caption" style="z-index:2"><span>Break / rebuild / repeat</span></div>
   </section>
 
   <section class="sv-status" aria-label="Selected scale" style="background:#EDEBE3;color:#12100E;border-bottom:1px solid #12100E">
@@ -661,6 +661,9 @@ class Component extends DCLogic {
         shapes.cube[j + 1] = v;
         shapes.cube[j + 2] = face === 5 ? 1 : -1;
       }
+      shapes.cube[j] *= 0.82;
+      shapes.cube[j + 1] *= 0.82;
+      shapes.cube[j + 2] *= 0.82;
 
       const y = 1 - i / (count - 1) * 2;
       const radius = Math.sqrt(1 - y * y);
@@ -679,7 +682,7 @@ class Component extends DCLogic {
 
     const st = { dead: false, visible: true, raf: 0 };
     canvas.__process = st;
-    const sequence = ["wave", "scatter", "cube", "scatter", "sphere", "scatter"];
+    const sequence = ["wave", "wave", "scatter", "cube", "scatter", "sphere", "scatter"];
     const smooth = n => n * n * (3 - 2 * n);
     const startedAt = performance.now();
     const draw = now => {
@@ -724,7 +727,7 @@ class Component extends DCLogic {
         const perspective = 4.4 / Math.max(1.4, 4.4 - rz);
         const px = width * 0.5 + rx * scale * perspective;
         const py = height * 0.5 - ry * scale * perspective;
-        const size = Math.max(1, 1.55 * dpr * perspective);
+        const size = Math.max(1.5, 2.4 * dpr * perspective);
         ctx.fillStyle = i % 17 === 0 ? "#E0197C" : "rgba(237,235,227," + Math.min(0.92, 0.38 + perspective * 0.36) + ")";
         ctx.fillRect(px, py, size, size);
       }
@@ -1036,7 +1039,6 @@ class Component extends DCLogic {
     const engineeringWork = this.work.slice(0, 3).map(decorate);
     const creativeWork = this.work.slice(3).map(decorate);
     return {
-      processPointCount: "900",
       heroRef: this.heroRef,
       processRef: this.processRef,
       fgrRef: this.fgrRef,
