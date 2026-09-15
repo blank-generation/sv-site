@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Srinivas Vijayakumar is a senior product engineer and new-media artist working across platforms, live systems, hardware and installations.">
+<meta name="theme-color" content="#EDEBE3">
+<meta property="og:title" content="Srinivas Vijayakumar - Senior Product Engineer & New-Media Artist">
+<meta property="og:description" content="Product engineering, live systems, hardware and new-media work by Srinivas Vijayakumar.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./media/td-angular.webp">
+<title>Srinivas Vijayakumar - Senior Product Engineer & New-Media Artist</title>
+<link rel="icon" href="./media/favicon.svg" type="image/svg+xml">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&amp;family=Geist+Pixel&amp;family=VT323&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #EDEBE3; }
+  * { box-sizing: border-box; }
+  a { color: #12100E; text-decoration: none; }
+  a:hover { color: #E0197C; }
+  a:focus-visible,button:focus-visible { outline:2px solid #E0197C;outline-offset:4px; }
+  ::selection { background: #E0197C; color: #EDEBE3; }
+  @keyframes svstatic { 0% { transform:translate(0,0) } 25% { transform:translate(-1%,1%) } 50% { transform:translate(1%,-1%) } 75% { transform:translate(.5%,1%) } 100% { transform:translate(0,0) } }
+  html { scroll-behavior:smooth; }
+  [id] { scroll-margin-top:80px; }
+  .sv-skip { position:fixed;left:12px;top:-60px;z-index:100;background:#12100E;color:#EDEBE3;padding:10px 14px;font:16px 'VT323',monospace; }
+  .sv-skip:focus { top:12px;color:#EDEBE3; }
+  .sv-topbar { position:sticky;top:0;z-index:40;width:100%;min-height:48px;margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);background:#EDEBE3;border-bottom:1px solid #12100E;box-shadow:0 4px 0 #12100E;font:15px 'VT323','JetBrains Mono',monospace;letter-spacing:.07em;text-transform:uppercase; }
+  .sv-mark { display:flex;align-items:center;justify-content:center;min-width:64px;padding:0 17px;background:#12100E;color:#EDEBE3;font-family:'Geist Pixel',monospace;font-size:19px;letter-spacing:0;transition:background .18s ease,color .18s ease; }
+  .sv-mark span { color:#E0197C; }
+  .sv-mark:hover { background:#E0197C;color:#EDEBE3; }
+  .sv-mark:hover span { color:#12100E; }
+  .sv-nav { display:flex;justify-content:flex-end;min-width:0; }
+  .sv-nav a { display:flex;align-items:center;justify-content:center;padding:0 clamp(12px,1.8vw,25px);border-left:1px solid rgba(18,16,14,.3);color:#12100E;white-space:nowrap;transition:background .18s ease,color .18s ease,transform .18s ease; }
+  .sv-nav a:hover { background:#E0197C;color:#EDEBE3; }
+  .sv-nav a:active { transform:translateY(1px); }
+  .sv-work-grid { display:grid;grid-template-columns:repeat(12,minmax(0,1fr));border-top:1px solid rgba(18,16,14,.28); }
+  .sv-case { min-width:0;border-right:1px solid rgba(18,16,14,.28);border-bottom:1px solid rgba(18,16,14,.28); }
+  .sv-case--seven { grid-column:span 7; }
+  .sv-case--five { grid-column:span 5; }
+  .sv-case--wide { grid-column:1/-1;display:grid;grid-template-columns:minmax(220px,.48fr) minmax(0,1fr); }
+  .sv-case-copy { padding:clamp(24px,3.6vw,52px);display:flex;flex-direction:column;gap:13px; }
+  .sv-case-heading { padding:clamp(24px,3.6vw,52px); }
+  .sv-case--wide .sv-case-copy { grid-column:2; }
+  .sv-case--wide .sv-case-heading { grid-column:1;grid-row:1;padding:clamp(24px,3.6vw,52px);border-right:1px solid rgba(18,16,14,.28); }
+  .sv-case-heading h4 { margin:10px 0 0;font-family:'Geist Pixel',monospace;font-size:clamp(22px,2.8vw,40px);line-height:1.08;font-weight:400; }
+  .sv-case-meta { font:14px 'VT323',monospace;letter-spacing:.07em;text-transform:uppercase;color:rgba(18,16,14,.68); }
+  .sv-case p { margin:0;font-size:16px;line-height:1.58;text-wrap:pretty; }
+  .sv-creative-grid .sv-case { display:flex;flex-direction:column; }
+  .sv-creative-grid .sv-case-heading { padding-bottom:20px; }
+  .sv-creative-grid .sv-case-copy { padding-top:0; }
+  .sv-creative-grid .sv-case--wide { display:grid;grid-template-columns:minmax(280px,.72fr) minmax(0,1.28fr);grid-template-rows:auto 1fr; }
+  .sv-creative-grid .sv-case--wide .sv-work-visual { grid-column:1;grid-row:1/3;min-height:430px;border-right:1px solid rgba(18,16,14,.28);border-bottom:0; }
+  .sv-creative-grid .sv-case--wide .sv-case-heading { grid-column:2;grid-row:1;border-right:0; }
+  .sv-creative-grid .sv-case--wide .sv-case-copy { grid-column:2;grid-row:2; }
+  .sv-work-visual { position:relative;overflow:hidden;min-height:clamp(240px,34vw,480px);border-bottom:1px solid rgba(18,16,14,.28);background-color:#DCD8CB;background-size:cover;background-position:center; }
+  .sv-work-visual::after { content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(18,16,14,.18) 0 1px,transparent 1px 4px);mix-blend-mode:multiply; }
+  .sv-work-link { margin-top:auto;padding-top:12px;font:14px 'VT323',monospace;letter-spacing:.08em;text-transform:uppercase;text-decoration:underline;text-underline-offset:4px; }
+  .sv-stats { display:grid;grid-template-columns:repeat(4,minmax(0,1fr)); }
+  .sv-status { display:grid;grid-template-columns:minmax(0,1.45fr) minmax(260px,.55fr); }
+  .sv-process-stage { position:relative;min-height:clamp(590px,72vh,760px);overflow:hidden;background:#12100E;color:#EDEBE3;border-bottom:1px solid #12100E;isolation:isolate; }
+  .sv-process-stage::after { content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(18,16,14,.88) 0,rgba(18,16,14,.52) 28%,transparent 58%); }
+  .sv-process-copy { position:absolute;z-index:2;left:clamp(20px,4vw,56px);top:clamp(34px,6vw,80px);width:min(580px,48vw);display:flex;flex-direction:column;gap:18px;text-shadow:0 1px 0 #12100E; }
+  .sv-process-canvas { position:absolute;inset:0;width:100%;height:100%;display:block; }
+  .sv-process-caption { position:absolute;left:18px;right:18px;bottom:14px;display:flex;justify-content:space-between;gap:16px;color:#EDEBE3;font:13px 'VT323',monospace;letter-spacing:.09em;text-transform:uppercase;pointer-events:none; }
+  .sv-small-grid { display:grid;grid-template-columns:minmax(280px,.82fr) minmax(0,1.18fr); }
+  .sv-small-visual { min-width:0;border-right:1px solid rgba(237,235,227,.28);display:flex;flex-direction:column; }
+  .sv-small-canvas { display:block;width:100%;min-height:520px;flex:1;background:#12100E; }
+  .sv-small-control { width:100%;padding:13px 18px;border:0;border-top:1px solid rgba(237,235,227,.28);background:#12100E;color:#EDEBE3;font:15px 'VT323',monospace;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;text-align:left; }
+  .sv-small-control:hover { color:#E0197C; }
+  .sv-small-control:active,button:active { transform:translateY(1px); }
+  .sv-small-copy { padding:clamp(30px,5vw,72px) clamp(20px,4vw,56px); }
+  .sv-small-intro { margin:16px 0 34px;max-width:38em;color:#DAD6C9;font-size:17px;line-height:1.55; }
+  .sv-small-item { padding:17px 0;border-top:1px solid rgba(237,235,227,.28); }
+  .sv-small-item:last-child { border-bottom:1px solid rgba(237,235,227,.28); }
+  .sv-small-title { display:flex;justify-content:space-between;gap:18px;color:#EDEBE3;font-family:'Geist Pixel',monospace;font-size:clamp(18px,2vw,25px);line-height:1.2; }
+  .sv-small-title:hover { color:#E0197C; }
+  .sv-small-desc { margin:8px 0 0;color:#AAA69C;font-size:15px;line-height:1.45;max-width:48em; }
+  .sv-small-code { display:inline-block;margin-top:8px;color:#EDEBE3;font:14px 'VT323',monospace;letter-spacing:.06em;text-decoration:underline;text-underline-offset:4px; }
+  .sv-sound-grid { display:grid;grid-template-columns:minmax(360px,1.1fr) minmax(340px,.9fr); }
+  .sv-sound-copy { padding:clamp(34px,5vw,72px) clamp(20px,4vw,56px);display:flex;flex-direction:column;justify-content:center;gap:34px; }
+  .sv-tv-stage { padding:clamp(34px,5vw,72px) clamp(24px,5vw,72px);background:#12100E;border-left:1px solid rgba(237,235,227,.28);display:flex;align-items:center;justify-content:center; }
+  .sv-tv-shell { position:relative;max-width:440px;margin:0 auto;padding:clamp(14px,2vw,24px);padding-bottom:clamp(52px,6vw,76px);background:#45413B;border:1px solid #090807;box-shadow:9px 10px 0 #090807; }
+  .sv-tv-screen { position:relative;overflow:hidden;background:#12100E;border:2px solid #090807; }
+  .sv-tv-screen img { display:block;width:100%;height:auto;filter:saturate(.82) contrast(1.15); }
+  .sv-tv-screen::after { content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(18,16,14,.54) 0 1px,transparent 1px 4px); }
+  .sv-tv-static { position:absolute;inset:-8%;pointer-events:none;opacity:.2;background:repeating-radial-gradient(circle at 20% 30%,rgba(237,235,227,.8) 0 1px,transparent 1px 3px),repeating-linear-gradient(90deg,transparent 0 7px,rgba(224,25,124,.35) 7px 8px);mix-blend-mode:screen;animation:svstatic .22s steps(2,end) infinite; }
+  .sv-tv-controls { position:absolute;left:clamp(16px,2vw,26px);right:clamp(16px,2vw,26px);bottom:15px;display:flex;align-items:center;justify-content:space-between;color:#C8C3B7;font:13px 'VT323',monospace;letter-spacing:.11em;text-transform:uppercase; }
+  .sv-tv-controls span:last-child { display:block;width:18px;height:18px;border:1px solid #C8C3B7;border-radius:50%;box-shadow:-28px 0 0 -7px #E0197C; }
+  .sv-td { position:relative;min-height:clamp(520px,72vh,760px);overflow:hidden;background:#1F1B30;color:#EDEBE3;border-bottom:1px solid #12100E;isolation:isolate; }
+  .sv-td-fallback { position:absolute;inset:0;width:100%;height:100%;object-fit:cover; }
+  .sv-td-canvas { position:absolute;inset:0;width:100%;height:100%;display:block; }
+  .sv-td::after { content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(31,27,48,.9) 0,rgba(31,27,48,.54) 42%,rgba(31,27,48,.08) 74%); }
+  .sv-td-copy { position:relative;z-index:2;min-height:inherit;width:min(680px,58vw);padding:clamp(42px,7vw,100px) clamp(20px,5vw,72px);display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start; }
+  .sv-td-title { margin:0;font-family:'Geist Pixel',monospace;font-size:clamp(42px,7vw,104px);line-height:.84;font-weight:400;text-transform:uppercase; }
+  .sv-td-body { margin:28px 0 0;max-width:34em;color:#E1DDEB;font-size:18px;line-height:1.52; }
+  .sv-td-cta { display:inline-block;margin-top:28px;padding:12px 16px;border:1px solid rgba(237,235,227,.72);color:#EDEBE3;font:16px 'VT323',monospace;letter-spacing:.08em;text-transform:uppercase;transition:background .18s ease,color .18s ease,transform .18s ease; }
+  .sv-td-cta:hover { background:#E0197C;color:#EDEBE3;border-color:#E0197C; }
+  .sv-td-cta:active { transform:translateY(1px); }
+  .sv-about-stack { display:grid;grid-template-rows:auto auto;padding:0 !important; }
+  .sv-about-cell { padding:clamp(28px,4vw,52px) clamp(20px,4vw,56px); }
+  .sv-about-cell + .sv-about-cell { border-top:1px solid rgba(18,16,14,.28); }
+  @media (max-width:760px) {
+    .sv-topbar { top:8px;width:calc(100% - 16px);min-height:44px;margin:8px auto;grid-template-columns:46px minmax(0,1fr);box-shadow:3px 3px 0 #12100E;font-size:12px; }
+    .sv-mark { min-width:46px;padding:0;font-size:16px; }
+    .sv-nav { display:grid;grid-template-columns:repeat(3,minmax(0,1fr)); }
+    .sv-nav a { padding:10px 5px;line-height:1.05;text-align:center; }
+    .sv-nav a:nth-child(1),.sv-nav a:nth-child(4) { display:none; }
+    .sv-work-grid { grid-template-columns:1fr; }
+    .sv-case--seven,.sv-case--five,.sv-case--wide,.sv-creative-grid .sv-case--wide { grid-column:1;display:block; }
+    .sv-case--wide .sv-case-heading { border-right:0;border-bottom:1px solid rgba(18,16,14,.28); }
+    .sv-creative-grid .sv-case--wide .sv-work-visual { min-height:260px;border-right:0;border-bottom:1px solid rgba(18,16,14,.28); }
+    .sv-work-visual { min-height:240px; }
+    .sv-stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .sv-status { grid-template-columns:1fr; }
+    .sv-process-stage { min-height:720px; }
+    .sv-process-stage::after { background:linear-gradient(180deg,rgba(18,16,14,.94) 0,rgba(18,16,14,.62) 38%,transparent 68%); }
+    .sv-process-copy { top:32px;left:20px;width:calc(100% - 40px); }
+    .sv-split-copy { border-left:0 !important;border-top:1px solid #12100E; }
+    .sv-small-grid { grid-template-columns:1fr; }
+    .sv-small-visual { border-right:0;border-bottom:1px solid rgba(237,235,227,.28); }
+    .sv-small-canvas { min-height:360px; }
+    .sv-sound-grid { grid-template-columns:1fr; }
+    .sv-tv-stage { border-left:0;border-top:1px solid rgba(237,235,227,.28); }
+    .sv-tv-stage { padding:32px 20px 40px; }
+    .sv-tv-shell { padding:10px;padding-bottom:50px;box-shadow:6px 7px 0 #A7A297; }
+    .sv-td { min-height:620px; }
+    .sv-td::after { background:linear-gradient(180deg,rgba(31,27,48,.48) 0,rgba(31,27,48,.2) 42%,rgba(31,27,48,.94) 72%); }
+    .sv-td-copy { width:100%;padding:36px 20px 42px;justify-content:flex-end; }
+    .sv-td-title { font-size:clamp(42px,15vw,72px); }
+  }
+  @media (prefers-reduced-motion:reduce) {
+    html { scroll-behavior:auto; }
+    *,*::before,*::after { animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important; }
+  }
+</style>
+</helmet>
+<div style="background:#EDEBE3;color:#12100E;font-family:Archivo,Helvetica,sans-serif;min-height:100dvh;overflow-x:hidden">
+  <a class="sv-skip" href="#work">Skip to selected work</a>
+
+  <header class="sv-topbar">
+    <a class="sv-mark" href="#" aria-label="Back to top">SV<span>/</span></a>
+    <nav class="sv-nav" aria-label="Primary navigation">
+      <a href="#practice">Practice</a>
+      <a href="#work">Work</a>
+      <a href="#play">Small things</a>
+      <a href="#sound">Sound</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));border-bottom:1px solid #12100E">
+    <div style="padding:clamp(28px,5vw,72px) clamp(20px,4vw,56px);display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-width:0;min-height:auto">
+      <div style="min-width:0;flex:none">
+        <h1 style="margin:0;font-family:'Geist Pixel',monospace;font-size:clamp(32px,4vw,86px);line-height:1;letter-spacing:0;font-weight:400;overflow-wrap:break-word">Srinivas<br>Vijayakumar</h1>
+        <p style="margin:24px 0 0;font-size:clamp(18px,2.1vw,27px);line-height:1.34;max-width:22em;text-wrap:pretty;font-weight:400">Senior product engineer and new-media artist. I build platforms, live systems and the occasional strange machine.</p>
+      </div>
+    </div>
+    <div style="position:relative;border-left:1px solid #12100E;min-height:clamp(360px,58vh,720px);background:#EDEBE3;overflow:hidden">
+      <canvas ref="{{ heroRef }}" role="img" aria-label="A point-cloud portrait that moves away from the pointer" style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
+      <div style="position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(18,16,14,0.16) 0 1px,transparent 1px 4px);mix-blend-mode:multiply"></div>
+    </div>
+  </section>
+
+  <section id="practice" class="sv-process-stage">
+    <canvas class="sv-process-canvas" ref="{{ processRef }}" role="img" aria-label="A point cloud repeatedly breaking apart and reforming as a wave, cube and sphere">Your browser does not support canvas.</canvas>
+    <div class="sv-process-copy">
+      <div style="font-family:'VT323','JetBrains Mono',monospace;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;color:#E0197C;margin-bottom:18px">How I work</div>
+      <h2 style="margin:0;font-family:'Geist Pixel',monospace;font-size:clamp(27px,3.5vw,50px);line-height:1.06;letter-spacing:0;font-weight:400">I break things to see what else they can become.</h2>
+      <p style="margin:4px 0 0;font-size:18px;line-height:1.52;text-wrap:pretty">I enjoy the loop: make something, pull it apart, learn what it is doing, then build the next version from the useful pieces.</p>
+      <p style="margin:0;font-size:16px;line-height:1.5;text-wrap:pretty">The materials change between product engineering and new-media work. The process does not.</p>
+    </div>
+    <div class="sv-process-caption" style="z-index:2"><span>Break / rebuild / repeat</span><span>{{ processPointCount }} points</span></div>
+  </section>
+
+  <section class="sv-status" aria-label="Selected scale" style="background:#EDEBE3;color:#12100E;border-bottom:1px solid #12100E">
+    <div style="min-width:0">
+      <div class="sv-stats">
+        <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+          <div style="padding:clamp(20px,3vw,36px) clamp(16px,3vw,38px);border-right:1px solid rgba(18,16,14,.22);min-width:0">
+            <div style="font-family:'Geist Pixel',monospace;font-size:clamp(25px,3vw,43px);line-height:1;color:{{ s.color }}">{{ s.value }}</div>
+            <div style="margin-top:9px;font-family:'VT323',monospace;font-size:13px;line-height:1.25;letter-spacing:.11em;text-transform:uppercase;color:#5F5B54">{{ s.label }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="position:relative;min-height:220px;overflow:hidden;border-left:1px solid rgba(18,16,14,.22)">
+      <img src="./media/td-wallpaper.jpg" alt="Generative terrain created by Television Dust" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(18,16,14,.05) 0 2px,rgba(18,16,14,.26) 2px 4px)"></div>
+    </div>
+  </section>
+
+  <section id="work" style="border-bottom:1px solid #12100E">
+    <h2 style="margin:0;padding:clamp(34px,5vw,72px) clamp(20px,4vw,56px) clamp(22px,3vw,36px);font-family:'Geist Pixel',monospace;font-size:clamp(28px,4vw,58px);line-height:1.05;font-weight:400">Selected work</h2>
+    <h3 style="margin:0;padding:0 clamp(20px,4vw,56px) 16px;font-size:18px;font-weight:600">Engineering</h3>
+    <div class="sv-work-grid">
+      <sc-for list="{{ engineeringWork }}" as="w" hint-placeholder-count="3">
+        <article class="sv-case {{ w.layout }}">
+          <div class="sv-case-heading">
+            <div class="sv-case-meta">{{ w.kind }} / {{ w.year }}</div>
+            <h4>{{ w.title }}</h4>
+          </div>
+          <div class="sv-case-copy">
+            <sc-for list="{{ w.paragraphs }}" as="p" hint-placeholder-count="3">
+              <p>{{ p }}</p>
+            </sc-for>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+    <section class="sv-td" aria-labelledby="television-dust-title">
+      <img class="sv-td-fallback" src="./uploads/art2.png" alt="" aria-hidden="true">
+      <canvas class="sv-td-canvas" ref="{{ tdRef }}" role="img" aria-label="Television Dust artwork displaced into a rotating depth field"></canvas>
+      <div class="sv-td-copy">
+        <h2 class="sv-td-title" id="television-dust-title">Television<br>Dust</h2>
+        <p class="sv-td-body">A new media art practice by Rhea Fabian and me, exploring art, technology and the human condition.</p>
+        <a class="sv-td-cta" href="https://televisiondust.art" target="_blank" rel="noopener">Visit Television Dust ↗</a>
+      </div>
+    </section>
+    <div class="sv-work-grid sv-creative-grid">
+      <sc-for list="{{ creativeWork }}" as="w" hint-placeholder-count="3">
+        <article class="sv-case {{ w.layout }}">
+          <div class="sv-work-visual" style="{{ w.previewStyle }}" role="img" aria-label="{{ w.visualLabel }}"></div>
+          <div class="sv-case-heading">
+            <div class="sv-case-meta">{{ w.kind }} / {{ w.year }}</div>
+            <h4>{{ w.title }}</h4>
+          </div>
+          <div class="sv-case-copy">
+            <sc-for list="{{ w.paragraphs }}" as="p" hint-placeholder-count="3">
+              <p>{{ p }}</p>
+            </sc-for>
+            <sc-if value="{{ w.url }}">
+              <a class="sv-work-link" href="{{ w.url }}" target="_blank" rel="noopener">More on Television Dust ↗</a>
+            </sc-if>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="play" style="background:#12100E;color:#EDEBE3;border-bottom:1px solid rgba(237,235,227,.28)">
+    <div class="sv-small-grid">
+      <div class="sv-small-visual">
+        <canvas class="sv-small-canvas" ref="{{ fgrRef }}" role="img" aria-label="FGR artwork redrawn as moving horizontal waves">Your browser does not support canvas.</canvas>
+        <button class="sv-small-control" onClick="{{ scrambleFgr }}">Scramble the picture</button>
+      </div>
+      <div class="sv-small-copy">
+        <h2 style="margin:0;font-family:'Geist Pixel',monospace;font-size:clamp(28px,4vw,56px);line-height:1.05;font-weight:400">Small things</h2>
+        <p class="sv-small-intro">Sketches, side projects and websites I made because somebody needed one, or because I wanted to see if an idea would work.</p>
+        <div>
+          <sc-for list="{{ smallThings }}" as="s" hint-placeholder-count="5">
+            <article class="sv-small-item">
+              <a class="sv-small-title" href="{{ s.url }}" target="_blank" rel="noopener"><span>{{ s.title }}</span><span aria-hidden="true">↗</span></a>
+              <p class="sv-small-desc">{{ s.desc }}</p>
+              <sc-if value="{{ s.codeUrl }}">
+                <a class="sv-small-code" href="{{ s.codeUrl }}" target="_blank" rel="noopener">Source on GitHub ↗</a>
+              </sc-if>
+            </article>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sound" style="background:#12100E;color:#EDEBE3;border-bottom:1px solid #12100E">
+    <div class="sv-sound-grid">
+      <div class="sv-sound-copy">
+        <div style="min-width:0">
+          <h2 style="margin:0;font-family:'Geist Pixel',monospace;font-size:clamp(26px,3.6vw,52px);line-height:1.06;letter-spacing:0;font-weight:400">The Broadway Addicts</h2>
+          <p style="margin:20px 0 0;font-size:17px;line-height:1.5;max-width:34em;text-wrap:pretty;color:#DAD6C9">Frontman, guitarist, songwriter. <em style="font-style:normal;color:#EDEBE3;border-bottom:1px solid #E0197C">No Act</em>, our debut, came out in 2014 and is on all platforms. The live set at Omnivoid is up in full.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1px;min-width:0">
+          <a href="https://www.youtube.com/watch?v=mjrd-SQlfNk" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid rgba(237,235,227,0.3);color:#EDEBE3;font-family:'VT323','JetBrains Mono',monospace;font-size:15px;letter-spacing:0.06em;text-transform:uppercase" style-hover="color:#E0197C">
+            <span>Live at Omnivoid - full set</span><span>YouTube ↗</span>
+          </a>
+          <a href="https://open.spotify.com/search/The%20Broadway%20Addicts%20No%20Act" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid rgba(237,235,227,0.3);border-bottom:1px solid rgba(237,235,227,0.3);color:#EDEBE3;font-family:'VT323','JetBrains Mono',monospace;font-size:15px;letter-spacing:0.06em;text-transform:uppercase" style-hover="color:#E0197C">
+            <span>No Act - album, 2014</span><span>Streaming ↗</span>
+          </a>
+        </div>
+      </div>
+      <div class="sv-tv-stage" aria-label="Live performance still">
+        <div class="sv-tv-shell">
+          <div class="sv-tv-screen">
+            <img src="./media/led-stage.jpg" alt="The Broadway Addicts performing in front of live visuals on LED">
+            <div class="sv-tv-static" aria-hidden="true"></div>
+          </div>
+          <div class="sv-tv-controls" aria-hidden="true"><span>Input 01 / Omnivoid</span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-bottom:1px solid #12100E;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+    <div style="padding:clamp(28px,4vw,52px) clamp(20px,4vw,56px);min-width:0">
+      <h3 style="margin:0 0 16px;font-family:'Geist Pixel',monospace;font-size:clamp(22px,2.2vw,30px);font-weight:400">Under the hood</h3>
+      <p style="margin:0;font-size:18px;line-height:1.55;text-wrap:pretty">I work mostly with TypeScript, Python, Go, React, PostgreSQL and AWS. The live systems tend to involve C++, openFrameworks, OPENRNDR, Unity, GLSL shaders, ESP32s, sensors, OSC and display hardware.</p>
+    </div>
+    <div class="sv-split-copy sv-about-stack" style="border-left:1px solid #12100E;min-width:0">
+      <div class="sv-about-cell">
+        <h3 style="margin:0 0 16px;font-family:'Geist Pixel',monospace;font-size:clamp(22px,2.2vw,30px);font-weight:400">Meld</h3>
+        <p style="margin:0;font-size:18px;line-height:1.55;text-wrap:pretty">I co-founded <a href="https://itsmeld.com/" target="_blank" rel="noopener" style="border-bottom:1px solid #E0197C">Meld</a>, a Chennai-based brand design studio working across identity, packaging and digital experiences. I still consult with the team.</p>
+      </div>
+      <div class="sv-about-cell">
+        <h3 style="margin:0 0 16px;font-family:'Geist Pixel',monospace;font-size:clamp(22px,2.2vw,30px);font-weight:400">The longer version</h3>
+        <p style="margin:0;font-size:18px;line-height:1.55;text-wrap:pretty">If you want dates, job history and the full list of tools, they are all in my <a href="./media/Srinivas_Vijayakumar_CV.pdf" target="_blank" rel="noopener" style="border-bottom:1px solid #E0197C">CV</a>. On this page, I stuck to the work I actually wanted to talk about.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding:clamp(32px,5vw,80px) clamp(20px,4vw,56px) clamp(24px,3vw,40px)">
+    <h2 style="margin:0;font-family:'Geist Pixel',monospace;font-size:clamp(26px,4.6vw,64px);line-height:1.1;letter-spacing:0;font-weight:400;max-width:24em;text-wrap:balance">Open to engineering roles, commissions, consulting and odd projects.</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:32px;font-family:'VT323','JetBrains Mono',monospace;font-size:17px;letter-spacing:0.05em">
+      <a href="mailto:atvdru@gmail.com" style="border-bottom:1px solid #12100E">atvdru@gmail.com ↗</a>
+      <a href="https://linkedin.com/in/srinivas-vijayakumar-924152137" target="_blank" rel="noopener" style="border-bottom:1px solid #12100E">LinkedIn ↗</a>
+      <a href="https://televisiondust.art" target="_blank" rel="noopener" style="border-bottom:1px solid #12100E">televisiondust.art ↗</a>
+      <a href="./media/Srinivas_Vijayakumar_CV.pdf" target="_blank" rel="noopener" style="border-bottom:1px solid #12100E">CV (PDF) ↗</a>
+    </div>
+    <div style="margin-top:40px;padding-top:16px;border-top:1px solid #12100E;display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;font-family:'VT323','JetBrains Mono',monospace;font-size:13px;letter-spacing:0.09em;text-transform:uppercase;opacity:0.7">
+      <span>Chennai, India · +91 80562 99487</span>
+      <span>Open to UK relocation · Skilled Worker sponsorship required</span>
+      <span>© 2026 Srinivas Vijayakumar</span>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#E0197C&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#E0197C&quot;,&quot;#1B4FE0&quot;,&quot;#0F8A4B&quot;,&quot;#E2451B&quot;],&quot;section&quot;:&quot;Look&quot;},&quot;heroDecay&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0,&quot;max&quot;:2,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Look&quot;}}">
+class Component extends DCLogic {
+  state = {};
+
+  work = [
+    {
+      id: "extraa",
+      title: "Extraa platform",
+      kind: "Product engineering",
+      year: "2023-present",
+      paragraphs: [
+        "When I joined Extraa, it was a feedback and rewards product built as a monolithic PHP/Yii application. Everything lived in one codebase, and many of the programme rules were hard-coded. That made sense for the product it had originally been built to support, but it became harder to adapt as the company started exploring different kinds of rewards, loyalty and payment programmes.",
+        "I worked through the whole rebuild: figuring out what the new platform needed to do, designing the architecture, writing the core implementation and handling the migration. Campaign rules, coupons, cashback, interfaces and branding became configurable instead of needing a separate version of the platform each time.",
+        "Not long after, a campus EV shuttle operator needed NFC travel passes, card issuing, administration and a separate white-labelled customer platform. We delivered the whole thing in about a week. It now serves more than 300 students and has recorded over 10,000 rides."
+      ]
+    },
+    {
+      id: "we1",
+      title: "Offline NFC wallet",
+      kind: "Real-time / edge",
+      year: "2024",
+      paragraphs: [
+        "The internet at a live event is not something you want to bet the payment system on. This carnival in Chennai had 21,116 NFC cards moving between roughly 60 terminals and 54 stalls. The terminals worked online when they could and offline when they had to, while the top-up zones stayed connected.",
+        "Each card carried a user ID, balance, transaction counter, its last three transactions and a previous copy of its own state. We packed that into binary and encrypted it with AES. A transaction only counted after the terminal wrote the new state to the card and read it back successfully. Sequence numbers and IDs derived from the device, card and timestamp gave the server enough context to reconcile transactions later.",
+        "Cards did occasionally get corrupted, mostly at a crowded entry point where they were being tapped in a hurry. The help desk tool scanned the card, checked it against the last transaction on the server and showed us the gap. Reissuing one usually took two to five minutes, with at most the latest unsynced transaction left to sort out."
+      ]
+    },
+    {
+      id: "migration",
+      title: "Migration tooling",
+      kind: "Data systems",
+      year: "2023",
+      paragraphs: [
+        "The old database had roughly one million records, and the new schema looked very different. One old row could turn into several related records. The source data also had duplicates and very few constraints, so a straight copy was out of the question.",
+        "I built Python tools to reshape and validate the data, preserve the old IDs and keep pulling in changes while both systems were live. We also changed how personal information was stored, hashing and encrypting fields such as email addresses and phone numbers instead of bringing them across as plain values.",
+        "Reconciliation scripts queried both databases and reported anything that did not match. That let us find missing or duplicated users, fix the data and run the comparison again before cutover."
+      ]
+    },
+    {
+      id: "heart",
+      title: "Have A Heart?",
+      kind: "Installation",
+      year: "2026",
+      paragraphs: [
+        "A screen sits among mannequin parts reaching into the room. While nobody is touching it, the installation watches the awkward crowd and offers sarcastic little prompts: step forward, take the hand, let the machine have a pulse.",
+        "When someone holds the sensor, their heartbeat generates a unique collage and a set of curves across three CRT televisions. The image keeps changing with them. Friend groups quickly started comparing results and judging each other's collages.",
+        "Rhea Fabian and I developed the concept through Television Dust. I designed the system, wrote the ESP32 firmware and Processing software, and built, wired and tested the physical installation."
+      ]
+    },
+    {
+      id: "angular",
+      title: "The Angular Festival",
+      kind: "Generative identity / live visuals",
+      year: "2026",
+      paragraphs: [
+        "Rhea Fabian developed the festival identity around the Bouba/Kiki effect: people across cultures tend to match sharp and blobby shapes with the same invented sounds. We then had to carry that look across a website, social posts, reels and the main stage.",
+        "Making every artist announcement by hand was going to take ages, so I built a tool in Processing that recombined the identity's shapes, images and colours. We used it for around 20 multi-part artist posts, mixing writing, video and imagery, and saved about two weeks of repetitive production work.",
+        "I built the main stage system in OPENRNDR. It pulled live cut-outs of the performers into the visuals, with an iPad sending controls over OSC. I handled the technical direction, integration and live operation."
+      ]
+    },
+    {
+      id: "multo",
+      title: "Multo",
+      kind: "Live systems tool",
+      year: "2019-present",
+      paragraphs: [
+        "Multo began because I did not want to pay for commercial software that still would not solve my problem. USB capture cards sometimes failed during performances. Because input handling lived inside the main visuals setup, recovering a card could mean restarting the thing running the show.",
+        "I separated the unreliable part into its own C++ and openFrameworks application and routed the feeds into Magic Music Visuals through Syphon. When an input disappeared, Multo held the last good frame. Often it recovered without intervention; otherwise I could refresh the feed without taking down the main system.",
+        "Then the shows became more complicated. At Omnivoid, Multo received a Unity scene and a Kinect/LiDAR scene, fed my visual mixer, sent two separate HDMI streams to another VJ, and helped drive two projectors and a long LED wall. It has since been used for Fête de la Musique and a Focus Group Radio listening session for Brian Wilson's Smile. I recently rebuilt the interface and plan to release it as an open-source tool."
+      ]
+    }
+  ];
+
+  heroRef = React.createRef();
+  processRef = React.createRef();
+  fgrRef = React.createRef();
+  tdRef = React.createRef();
+
+  // Loop state lives on the canvas ELEMENT (canvas.__dust), not on this instance,
+  // so any instance that finds a canvas without a live loop can start or heal one.
+  ensureLoop() {
+    if (this.healing) return;
+    this.healing = true;
+    setTimeout(() => {
+      this.healing = false;
+      const c = this.heroRef.current;
+      if (!c || !c.clientWidth || !document.contains(c)) return;
+      const st = c.__dust;
+      if (st && !st.dead) {
+        // rAF can be throttled (hidden tab, offscreen iframe): nudge a frame directly
+        if (performance.now() - st.lastDraw > 400 && st.step) st.step();
+        return;
+      }
+      if (st) st.dead = true;
+      this.initGL(c);
+    }, 0);
+  }
+
+  // Keep the portrait point cloud alive when the host runtime remounts the view.
+  startHealing() {
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      this.ensureLoop();
+      return;
+    }
+    if (!this.heal) this.heal = setInterval(() => this.ensureLoop(), 250);
+    this.ensureLoop();
+  }
+
+  componentDidMount() {
+    this.startHealing();
+    this.initProcessCanvas(this.processRef.current);
+    this.initFgrCanvas(this.fgrRef.current);
+    this.initTelevisionDust(this.tdRef.current);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.heal);
+    const c = this.heroRef.current;
+    if (c && c.__dust) {
+      c.__dust.dead = true;
+      cancelAnimationFrame(c.__dust.raf);
+    }
+    const process = this.processRef.current;
+    if (process && process.__process) {
+      process.__process.dead = true;
+      cancelAnimationFrame(process.__process.raf);
+      if (process.__process.observer) process.__process.observer.disconnect();
+      if (process.__process.resizeObserver) process.__process.resizeObserver.disconnect();
+    }
+    const fgr = this.fgrRef.current;
+    if (fgr && fgr.__fgr) {
+      fgr.__fgr.dead = true;
+      cancelAnimationFrame(fgr.__fgr.raf);
+      if (fgr.__fgr.observer) fgr.__fgr.observer.disconnect();
+    }
+    const td = this.tdRef.current;
+    if (td && td.__td) {
+      td.__td.dead = true;
+      cancelAnimationFrame(td.__td.raf);
+      if (td.__td.observer) td.__td.observer.disconnect();
+      if (td.__td.resizeObserver) td.__td.resizeObserver.disconnect();
+      if (td.__td.move) td.removeEventListener("pointermove", td.__td.move);
+      if (td.__td.leave) td.removeEventListener("pointerleave", td.__td.leave);
+    }
+  }
+
+  initGL(canvas) {
+    if (!canvas) return;
+    const st = { lastDraw: performance.now(), dead: false, decay: 0.35, target: 0.35, mouse: [2, 2] };
+    canvas.__dust = st;
+    const gl = canvas.getContext("webgl", { antialias: true, alpha: true, premultipliedAlpha: false });
+    if (!gl) return;
+
+    const N = 200;
+    const uv = new Float32Array(N * N * 2);
+    let k = 0;
+    for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) { uv[k++] = x / (N - 1); uv[k++] = y / (N - 1); }
+
+    const vs = `
+      attribute vec2 a_uv;
+      uniform sampler2D u_tex;
+      uniform float u_time, u_decay, u_px;
+      uniform vec2 u_mouse, u_fit;
+      varying float v_lum;
+      float hash(vec2 p){ return fract(sin(dot(p, vec2(41.3, 289.1))) * 43758.5453); }
+      void main() {
+        float d = distance(a_uv, u_mouse);
+        float push = smoothstep(0.20, 0.0, d);
+
+        vec2 q = floor(a_uv * u_px) / u_px;
+        vec2 uvT = vec2(q.x, 1.0 - q.y);
+        float lum = dot(texture2D(u_tex, uvT).rgb, vec3(0.299, 0.587, 0.114));
+        v_lum = lum;
+
+        vec2 p = (a_uv - 0.5) * 2.0 * u_fit;
+        float band = floor(a_uv.y * 26.0);
+        float slip = (hash(vec2(band, floor(u_time * 1.7))) - 0.5);
+        p.x += slip * 0.10 * u_decay * step(0.72, hash(vec2(band, floor(u_time * 1.7) + 3.0)));
+        p.y += sin(a_uv.x * 12.0 + u_time * 0.6) * 0.012 * u_decay;
+        p += (vec2(hash(a_uv * 91.0), hash(a_uv * 57.0)) - 0.5) * 0.02 * u_decay * (1.0 - lum);
+        vec2 away = normalize(a_uv - u_mouse + vec2(0.0001));
+        p += away * push * 0.035;
+        gl_Position = vec4(p, 0.0, 1.0);
+        float sizeField = mix(1.2, 4.6, 1.0 - lum);
+        gl_PointSize = sizeField + push * 0.45;
+      }`;
+
+    const fs = `
+      precision mediump float;
+      varying float v_lum;
+      uniform vec3 u_ink, u_a1, u_a2, u_a3;
+      void main() {
+        float l = v_lum;
+        vec3 col = u_ink;
+        if (l > 0.30) col = u_a1;
+        if (l > 0.46) col = u_a2;
+        if (l > 0.60) col = u_a3;
+        if (l > 0.80) discard;
+        gl_FragColor = vec4(col, 1.0);
+      }`;
+
+    const mk = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s; };
+    const prog = gl.createProgram();
+    gl.attachShader(prog, mk(gl.VERTEX_SHADER, vs));
+    gl.attachShader(prog, mk(gl.FRAGMENT_SHADER, fs));
+    gl.linkProgram(prog);
+    gl.useProgram(prog);
+
+    const buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+    gl.bufferData(gl.ARRAY_BUFFER, uv, gl.STATIC_DRAW);
+    const loc = gl.getAttribLocation(prog, "a_uv");
+    gl.enableVertexAttribArray(loc);
+    gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+
+    const U = n => gl.getUniformLocation(prog, n);
+    const u = { tex: U("u_tex"), time: U("u_time"), decay: U("u_decay"), px: U("u_px"), mouse: U("u_mouse"), fit: U("u_fit"), ink: U("u_ink"), a1: U("u_a1"), a2: U("u_a2"), a3: U("u_a3") };
+
+    const hex = h => [parseInt(h.slice(1, 3), 16) / 255, parseInt(h.slice(3, 5), 16) / 255, parseInt(h.slice(5, 7), 16) / 255];
+    const accent = this.props.accent || "#E0197C";
+    gl.uniform3fv(u.ink, hex("#12100E"));
+    gl.uniform3fv(u.a1, hex(accent));
+    gl.uniform3fv(u.a2, hex("#1B4FE0"));
+    gl.uniform3fv(u.a3, hex("#0F8A4B"));
+    gl.uniform1f(u.px, 150.0);
+
+    const loadTex = (unit, src) => {
+      const tex = gl.createTexture();
+      gl.activeTexture(gl.TEXTURE0 + unit);
+      gl.bindTexture(gl.TEXTURE_2D, tex);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, new Uint8Array([200, 200, 200, 255]));
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+      const img = new Image();
+      img.onload = () => {
+        gl.activeTexture(gl.TEXTURE0 + unit);
+        gl.bindTexture(gl.TEXTURE_2D, tex);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
+      };
+      img.src = src;
+    };
+    loadTex(0, "./media/portrait.jpg");
+    gl.uniform1i(u.tex, 0);
+
+    if (!canvas.__dustMove) {
+      canvas.__dustMove = e => {
+        const r = canvas.getBoundingClientRect();
+        const cur = canvas.__dust;
+        if (cur) cur.mouse = [(e.clientX - r.left) / r.width, 1.0 - (e.clientY - r.top) / r.height];
+      };
+      canvas.addEventListener("pointermove", canvas.__dustMove, { passive: true });
+      canvas.addEventListener("pointerleave", () => {
+        const cur = canvas.__dust;
+        if (cur) cur.mouse = [2, 2];
+      }, { passive: true });
+      canvas.addEventListener("touchmove", e => {
+        const t = e.touches[0];
+        if (t) canvas.__dustMove({ clientX: t.clientX, clientY: t.clientY });
+      }, { passive: true });
+    }
+
+    const t0 = performance.now();
+    const frame = () => {
+      if (st.dead || canvas.__dust !== st || !document.contains(canvas)) return;
+      st.lastDraw = performance.now();
+      const dpr = Math.min(2, window.devicePixelRatio || 1);
+      const w = canvas.clientWidth, h = canvas.clientHeight;
+      if (canvas.width !== Math.floor(w * dpr) || canvas.height !== Math.floor(h * dpr)) {
+        canvas.width = Math.floor(w * dpr); canvas.height = Math.floor(h * dpr);
+      }
+      gl.viewport(0, 0, canvas.width, canvas.height);
+      gl.clearColor(0, 0, 0, 0);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+      const a = w / Math.max(1, h);
+      const fit = a > 0.86 ? [0.86 / a, 1.0] : [1.0, a / 0.86];
+      gl.uniform2f(u.fit, fit[0] * 0.92, fit[1] * 0.92);
+      st.decay += (st.target * (this.props.heroDecay ?? 1) - st.decay) * 0.06;
+      gl.uniform1f(u.decay, st.decay);
+      gl.uniform1f(u.time, (performance.now() - t0) / 1000);
+      gl.uniform2f(u.mouse, st.mouse[0], st.mouse[1]);
+      gl.drawArrays(gl.POINTS, 0, N * N);
+      if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      if (st.raf) cancelAnimationFrame(st.raf);
+      st.raf = requestAnimationFrame(frame);
+    };
+    st.step = frame;
+    frame();
+  }
+
+  initProcessCanvas(canvas) {
+    if (!canvas || canvas.__process) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    const count = 900;
+    const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const hash = n => {
+      const x = Math.sin(n * 91.3458) * 47453.5453;
+      return x - Math.floor(x);
+    };
+    const shapes = {
+      wave: new Float32Array(count * 3),
+      cube: new Float32Array(count * 3),
+      sphere: new Float32Array(count * 3),
+      scatter: new Float32Array(count * 3)
+    };
+
+    for (let i = 0; i < count; i++) {
+      const j = i * 3;
+      const col = i % 30;
+      const row = Math.floor(i / 30);
+      shapes.wave[j] = (col / 29 - 0.5) * 2.7;
+      shapes.wave[j + 1] = 0;
+      shapes.wave[j + 2] = (row / 29 - 0.5) * 2.2;
+
+      const face = i % 6;
+      const u = hash(i + 4) * 2 - 1;
+      const v = hash(i + 29) * 2 - 1;
+      if (face < 2) {
+        shapes.cube[j] = face ? 1 : -1;
+        shapes.cube[j + 1] = u;
+        shapes.cube[j + 2] = v;
+      } else if (face < 4) {
+        shapes.cube[j] = u;
+        shapes.cube[j + 1] = face === 3 ? 1 : -1;
+        shapes.cube[j + 2] = v;
+      } else {
+        shapes.cube[j] = u;
+        shapes.cube[j + 1] = v;
+        shapes.cube[j + 2] = face === 5 ? 1 : -1;
+      }
+
+      const y = 1 - i / (count - 1) * 2;
+      const radius = Math.sqrt(1 - y * y);
+      const theta = Math.PI * (3 - Math.sqrt(5)) * i;
+      shapes.sphere[j] = Math.cos(theta) * radius * 1.25;
+      shapes.sphere[j + 1] = y * 1.25;
+      shapes.sphere[j + 2] = Math.sin(theta) * radius * 1.25;
+
+      const burst = 1.8 + hash(i + 71) * 2.6;
+      const azimuth = hash(i + 113) * Math.PI * 2;
+      const elevation = (hash(i + 197) - 0.5) * Math.PI;
+      shapes.scatter[j] = Math.cos(azimuth) * Math.cos(elevation) * burst;
+      shapes.scatter[j + 1] = Math.sin(elevation) * burst;
+      shapes.scatter[j + 2] = Math.sin(azimuth) * Math.cos(elevation) * burst;
+    }
+
+    const st = { dead: false, visible: true, raf: 0 };
+    canvas.__process = st;
+    const sequence = ["wave", "scatter", "cube", "scatter", "sphere", "scatter"];
+    const smooth = n => n * n * (3 - 2 * n);
+    const startedAt = performance.now();
+    const draw = now => {
+      if (st.dead || canvas.__process !== st || !document.contains(canvas)) return;
+      const dpr = Math.min(1.5, window.devicePixelRatio || 1);
+      const width = Math.max(1, Math.floor(canvas.clientWidth * dpr));
+      const height = Math.max(1, Math.floor(canvas.clientHeight * dpr));
+      if (canvas.width !== width || canvas.height !== height) {
+        canvas.width = width;
+        canvas.height = height;
+      }
+      ctx.fillStyle = "#12100E";
+      ctx.fillRect(0, 0, width, height);
+
+      const time = reduced ? 0 : (now - startedAt) / 1000;
+      const duration = 2.8;
+      const step = Math.floor(time / duration) % sequence.length;
+      const local = time / duration - Math.floor(time / duration);
+      const amount = local < 0.2 ? 0 : local > 0.82 ? 1 : smooth((local - 0.2) / 0.62);
+      const fromName = sequence[step];
+      const toName = sequence[(step + 1) % sequence.length];
+      const from = shapes[fromName];
+      const to = shapes[toName];
+      const turn = time * 0.22;
+      const cy = Math.cos(turn), sy = Math.sin(turn);
+      const cx = Math.cos(-0.28), sx = Math.sin(-0.28);
+      const scale = Math.min(width, height) * 0.34;
+
+      for (let i = 0; i < count; i++) {
+        const j = i * 3;
+        let ax = from[j], ay = from[j + 1], az = from[j + 2];
+        let bx = to[j], by = to[j + 1], bz = to[j + 2];
+        if (fromName === "wave") ay += Math.sin(ax * 3.2 + az * 2.4 + time * 1.7) * 0.28;
+        if (toName === "wave") by += Math.sin(bx * 3.2 + bz * 2.4 + time * 1.7) * 0.28;
+        const x = ax + (bx - ax) * amount;
+        const y = ay + (by - ay) * amount;
+        const z = az + (bz - az) * amount;
+        const rx = x * cy - z * sy;
+        const rz0 = x * sy + z * cy;
+        const ry = y * cx - rz0 * sx;
+        const rz = y * sx + rz0 * cx;
+        const perspective = 4.4 / Math.max(1.4, 4.4 - rz);
+        const px = width * 0.5 + rx * scale * perspective;
+        const py = height * 0.5 - ry * scale * perspective;
+        const size = Math.max(1, 1.55 * dpr * perspective);
+        ctx.fillStyle = i % 17 === 0 ? "#E0197C" : "rgba(237,235,227," + Math.min(0.92, 0.38 + perspective * 0.36) + ")";
+        ctx.fillRect(px, py, size, size);
+      }
+    };
+    const frame = now => {
+      if (st.dead) return;
+      if (st.visible) draw(now);
+      if (!reduced) st.raf = requestAnimationFrame(frame);
+    };
+    st.draw = () => draw(performance.now());
+    if ("IntersectionObserver" in window) {
+      st.observer = new IntersectionObserver(entries => {
+        st.visible = entries[0].isIntersecting;
+      });
+      st.observer.observe(canvas);
+    }
+    if (reduced && "ResizeObserver" in window) {
+      st.resizeObserver = new ResizeObserver(() => st.draw());
+      st.resizeObserver.observe(canvas);
+    }
+    frame(performance.now());
+  }
+
+  initTelevisionDust(canvas) {
+    if (!canvas || canvas.__td) return;
+    const gl = canvas.getContext("webgl", { antialias: true, alpha: false });
+    if (!gl) return;
+    const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const cols = 150, rows = 80;
+    const vertices = new Float32Array(cols * rows * 2);
+    const indices = new Uint16Array((cols - 1) * (rows - 1) * 6);
+    let v = 0, q = 0;
+    for (let y = 0; y < rows; y++) for (let x = 0; x < cols; x++) {
+      vertices[v++] = x / (cols - 1);
+      vertices[v++] = y / (rows - 1);
+    }
+    for (let y = 0; y < rows - 1; y++) for (let x = 0; x < cols - 1; x++) {
+      const a = y * cols + x, b = a + 1, c = a + cols, d = c + 1;
+      indices[q++] = a; indices[q++] = c; indices[q++] = b;
+      indices[q++] = b; indices[q++] = c; indices[q++] = d;
+    }
+
+    const vs = `
+      precision highp float;
+      attribute vec2 a_uv;
+      uniform lowp sampler2D u_texture;
+      uniform mediump float u_time;
+      uniform float u_depth, u_scale;
+      uniform vec2 u_pointer, u_uvScale, u_uvOffset;
+      uniform vec3 u_rotation;
+      varying mediump vec2 v_uv;
+      varying mediump float v_depth;
+      float hash(vec2 p){ return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453); }
+      float noise(vec2 p){
+        vec2 i=floor(p), f=fract(p);f=f*f*(3.0-2.0*f);
+        return mix(mix(hash(i),hash(i+vec2(1.0,0.0)),f.x),mix(hash(i+vec2(0.0,1.0)),hash(i+vec2(1.0)),f.x),f.y);
+      }
+      void main(){
+        v_uv=a_uv*u_uvScale+u_uvOffset;
+        vec3 colour=texture2D(u_texture,v_uv).rgb;
+        float channelDepth=colour.r*.58+colour.g*.2-colour.b*.24;
+        float detail=noise(a_uv*12.0+vec2(u_time*.07,0.0))-.5;
+        float pointerLift=max(0.0,.22-distance(a_uv,u_pointer))*.55;
+        float displacement=(channelDepth-.18)*u_depth+detail*.09+pointerLift;
+        vec3 p=vec3((a_uv.x-.5)*2.0,(.5-a_uv.y)*2.0,displacement);
+        float cx=cos(u_rotation.x),sx=sin(u_rotation.x);
+        float cy=cos(u_rotation.y),sy=sin(u_rotation.y);
+        float cz=cos(u_rotation.z),sz=sin(u_rotation.z);
+        p=vec3(p.x,p.y*cx-p.z*sx,p.y*sx+p.z*cx);
+        p=vec3(p.x*cy+p.z*sy,p.y,-p.x*sy+p.z*cy);
+        p=vec3(p.x*cz-p.y*sz,p.x*sz+p.y*cz,p.z);
+        float perspective=3.7/max(1.5,3.7-p.z);
+        p.xy*=u_scale*perspective;
+        v_depth=displacement;
+        gl_Position=vec4(p.xy,0.0,1.0);
+      }`;
+    const fs = `
+      precision mediump float;
+      uniform lowp sampler2D u_texture;
+      uniform mediump float u_time;
+      varying mediump vec2 v_uv;
+      varying mediump float v_depth;
+      void main(){
+        vec3 colour=texture2D(u_texture,v_uv).rgb;
+        float scan=sin((v_uv.y+u_time*.01)*920.0)*.035;
+        float mesh=max(step(.965,fract(v_uv.x*150.0)),step(.965,fract(v_uv.y*80.0)))*.045;
+        colour+=clamp(v_depth*.12,-.16,.2)+scan+mesh;
+        float grey=dot(colour,vec3(.299,.587,.114));
+        colour=mix(vec3(grey),colour,1.14);
+        gl_FragColor=vec4(colour,1.0);
+      }`;
+    const shader = (type, source) => {
+      const item = gl.createShader(type);
+      gl.shaderSource(item, source);
+      gl.compileShader(item);
+      if (!gl.getShaderParameter(item, gl.COMPILE_STATUS)) {
+        console.error("Television Dust shader compile failed:", gl.getShaderInfoLog(item));
+        gl.deleteShader(item);
+        return null;
+      }
+      return item;
+    };
+    const vertexShader = shader(gl.VERTEX_SHADER, vs);
+    const fragmentShader = shader(gl.FRAGMENT_SHADER, fs);
+    if (!vertexShader || !fragmentShader) {
+      canvas.style.display = "none";
+      return;
+    }
+    const program = gl.createProgram();
+    gl.attachShader(program, vertexShader);
+    gl.attachShader(program, fragmentShader);
+    gl.linkProgram(program);
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+      console.error("Television Dust shader link failed:", gl.getProgramInfoLog(program));
+      canvas.style.display = "none";
+      gl.deleteProgram(program);
+      return;
+    }
+    gl.useProgram(program);
+    const vertexBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+    gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
+    const uvLocation = gl.getAttribLocation(program, "a_uv");
+    gl.enableVertexAttribArray(uvLocation);
+    gl.vertexAttribPointer(uvLocation, 2, gl.FLOAT, false, 0, 0);
+    const indexBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
+    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, indices, gl.STATIC_DRAW);
+    const U = name => gl.getUniformLocation(program, name);
+    const uniforms = {
+      texture: U("u_texture"), time: U("u_time"), depth: U("u_depth"), scale: U("u_scale"),
+      pointer: U("u_pointer"), uvScale: U("u_uvScale"), uvOffset: U("u_uvOffset"), rotation: U("u_rotation")
+    };
+    const texture = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, new Uint8Array([31, 27, 48, 255]));
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    gl.uniform1i(uniforms.texture, 0);
+
+    const st = { dead: false, visible: true, raf: 0, pointer: [.5, .5], imageRatio: 1.9, fallback: false };
+    canvas.__td = st;
+    const image = new Image();
+    const upload = () => {
+      st.imageRatio = image.naturalWidth / Math.max(1, image.naturalHeight);
+      gl.bindTexture(gl.TEXTURE_2D, texture);
+      gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
+      if (reduced) st.draw();
+    };
+    image.onload = upload;
+    image.onerror = () => {
+      if (st.fallback) return;
+      st.fallback = true;
+      image.src = "./media/td-kadhaigal.webp";
+    };
+    image.src = "./uploads/art2.png";
+
+    st.move = event => {
+      const rect = canvas.getBoundingClientRect();
+      st.pointer = [(event.clientX - rect.left) / rect.width, (event.clientY - rect.top) / rect.height];
+    };
+    st.leave = () => { st.pointer = [.5, .5]; };
+    canvas.addEventListener("pointermove", st.move, { passive: true });
+    canvas.addEventListener("pointerleave", st.leave, { passive: true });
+    const startedAt = performance.now();
+    const draw = now => {
+      if (st.dead || !document.contains(canvas)) return;
+      const dpr = Math.min(1.7, window.devicePixelRatio || 1);
+      const width = Math.max(1, Math.floor(canvas.clientWidth * dpr));
+      const height = Math.max(1, Math.floor(canvas.clientHeight * dpr));
+      if (canvas.width !== width || canvas.height !== height) {
+        canvas.width = width;
+        canvas.height = height;
+      }
+      gl.viewport(0, 0, width, height);
+      gl.clearColor(.122, .106, .188, 1);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+      const rect = canvas.getBoundingClientRect();
+      const progress = reduced ? .5 : Math.max(0, Math.min(1, (window.innerHeight - rect.top) / (window.innerHeight + rect.height)));
+      const targetRatio = width / height;
+      let uvX = 1, uvY = 1;
+      if (st.imageRatio > targetRatio) uvX = targetRatio / st.imageRatio;
+      else uvY = st.imageRatio / targetRatio;
+      gl.uniform2f(uniforms.uvScale, uvX, uvY);
+      gl.uniform2f(uniforms.uvOffset, (1 - uvX) / 2, (1 - uvY) / 2);
+      gl.uniform1f(uniforms.time, reduced ? 0 : (now - startedAt) / 1000);
+      gl.uniform1f(uniforms.depth, .72 + Math.sin(progress * Math.PI * 2.5) * .22);
+      gl.uniform1f(uniforms.scale, 1.12 + Math.sin(progress * Math.PI * 4) * .08);
+      gl.uniform2f(uniforms.pointer, st.pointer[0], st.pointer[1]);
+      gl.uniform3f(uniforms.rotation, Math.sin(progress * Math.PI * 3) * .12, progress * 1.28 - .64, Math.sin(progress * Math.PI * 2) * .1);
+      gl.drawElements(gl.TRIANGLES, indices.length, gl.UNSIGNED_SHORT, 0);
+    };
+    const frame = now => {
+      if (st.dead) return;
+      if (st.visible) draw(now);
+      if (!reduced) st.raf = requestAnimationFrame(frame);
+    };
+    st.draw = () => draw(performance.now());
+    if ("IntersectionObserver" in window) {
+      st.observer = new IntersectionObserver(entries => { st.visible = entries[0].isIntersecting; });
+      st.observer.observe(canvas);
+    }
+    if (reduced && "ResizeObserver" in window) {
+      st.resizeObserver = new ResizeObserver(() => st.draw());
+      st.resizeObserver.observe(canvas);
+    }
+    frame(performance.now());
+  }
+
+  initFgrCanvas(canvas) {
+    if (!canvas || canvas.__fgr) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const st = {
+      dead: false,
+      visible: true,
+      raf: 0,
+      phase: Math.random() * 100,
+      amplitudeA: 18,
+      amplitudeB: 8,
+      frequencyA: 0.028,
+      frequencyB: 0.073,
+      speed: 0.0012
+    };
+    canvas.__fgr = st;
+    const image = new Image();
+
+    const draw = time => {
+      if (st.dead || canvas.__fgr !== st || !document.contains(canvas)) return;
+      const width = Math.max(1, Math.floor(canvas.clientWidth * 0.72));
+      const height = Math.max(1, Math.floor(canvas.clientHeight * 0.72));
+      if (canvas.width !== width || canvas.height !== height) {
+        canvas.width = width;
+        canvas.height = height;
+      }
+      ctx.fillStyle = "#12100E";
+      ctx.fillRect(0, 0, width, height);
+      if (image.complete && image.naturalWidth) {
+        const sourceRatio = image.naturalWidth / image.naturalHeight;
+        const targetRatio = width / height;
+        let sx = 0, sy = 0, sw = image.naturalWidth, sh = image.naturalHeight;
+        if (sourceRatio > targetRatio) {
+          sw = image.naturalHeight * targetRatio;
+          sx = (image.naturalWidth - sw) / 2;
+        } else {
+          sh = image.naturalWidth / targetRatio;
+          sy = (image.naturalHeight - sh) / 2;
+        }
+        const tick = st.phase + time * st.speed;
+        for (let y = 0; y < height; y++) {
+          const offset = Math.sin(y * st.frequencyA + tick) * st.amplitudeA + Math.sin(y * st.frequencyB - tick * 0.63) * st.amplitudeB;
+          const sourceY = sy + y / height * sh;
+          ctx.drawImage(image, sx, sourceY, sw, Math.max(1, sh / height), offset, y, width, 1);
+        }
+      }
+    };
+
+    const frame = time => {
+      if (st.dead) return;
+      if (st.visible) draw(time);
+      if (!reduced) st.raf = requestAnimationFrame(frame);
+    };
+    st.draw = () => draw(performance.now());
+    image.onload = () => frame(performance.now());
+    image.onerror = () => {
+      if (!image.src.endsWith("td-wallpaper.jpg")) image.src = "./media/td-wallpaper.jpg";
+    };
+    image.src = "./uploads/contact1.png";
+    if ("IntersectionObserver" in window) {
+      st.observer = new IntersectionObserver(entries => {
+        st.visible = entries[0].isIntersecting;
+      });
+      st.observer.observe(canvas);
+    }
+  }
+
+  scrambleFgrCanvas() {
+    const canvas = this.fgrRef.current;
+    const st = canvas && canvas.__fgr;
+    if (!st) return;
+    st.phase = Math.random() * 100;
+    st.amplitudeA = 10 + Math.random() * 25;
+    st.amplitudeB = 4 + Math.random() * 14;
+    st.frequencyA = 0.015 + Math.random() * 0.035;
+    st.frequencyB = 0.05 + Math.random() * 0.07;
+    st.draw();
+  }
+
+  renderVals() {
+    const accent = this.props.accent || "#E0197C";
+    const art = {
+      heart: ["./media/td-heart.webp", "Have A Heart installation with CRT televisions and mannequin limbs", "https://televisiondust.art/projects/have-a-heart/"],
+      angular: ["./media/td-angular.webp", "A musician performing in front of Angular Festival live visuals", "https://televisiondust.art/projects/angular-festival/"],
+      multo: ["./media/td-omnivoid.webp", "Multo routing live visual systems across the Omnivoid stage", ""]
+    };
+    const decorate = (w, i) => {
+      const media = art[w.id];
+      return Object.assign({}, w, {
+        layout: ["sv-case--seven", "sv-case--five", "sv-case--wide"][i],
+        visualLabel: media ? media[1] : "",
+        url: media ? media[2] : "",
+        previewStyle: media ? (media[3] || "background-color:#12100E;background-image:url('" + media[0] + "');background-size:cover;background-position:center") : ""
+      });
+    };
+    const engineeringWork = this.work.slice(0, 3).map(decorate);
+    const creativeWork = this.work.slice(3).map(decorate);
+    return {
+      processPointCount: "900",
+      heroRef: this.heroRef,
+      processRef: this.processRef,
+      fgrRef: this.fgrRef,
+      tdRef: this.tdRef,
+      _loop: this.startHealing(),
+      stats: [
+        { value: "~3.0M", label: "Registered users", color: accent },
+        { value: "~60", label: "Enterprise clients", color: accent },
+        { value: "39M+", label: "Coupons issued", color: accent },
+        { value: "10+", label: "Products online", color: accent }
+      ],
+      engineeringWork,
+      creativeWork,
+      scrambleFgr: () => this.scrambleFgrCanvas(),
+      smallThings: [
+        { title: "TV Synth", url: "https://tv-synth.vercel.app/", codeUrl: "https://github.com/blank-generation/tv-synth", desc: "A node-based video synth and feedback engine that builds GLSL shaders from connected modules." },
+        { title: "Pink Section", url: "https://pink-section.vercel.app/", codeUrl: "", desc: "A tour site for Pink Section, built around a live generative Hydra background." },
+        { title: "Blanc 3D Shop", url: "https://blank-generation.github.io/blanc-3d-shop/", codeUrl: "", desc: "A Three.js clothing browser with model and colour switching, connected to the actual shop." },
+        { title: "The Angular Festival", url: "https://www.theangularfestival.com/", codeUrl: "", desc: "The festival information site, carrying the sharp and blobby Bouba/Kiki identity onto the web." },
+        { title: "Focus Group Radio", url: "https://fgr-ver.vercel.app/", codeUrl: "", desc: "A site for FGR. Its scanline-warp canvas is the thing moving beside this list." }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
