@@ -349,8 +349,8 @@ class Component extends DCLogic {
     {
       id: "we1",
       title: "Offline NFC wallet",
-      kind: "Real-time / edge",
-      year: "2024",
+      kind: "Offline payments",
+      year: "Apr-Jun 2026",
       paragraphs: [
         "The internet at a live event is not something you want to bet the payment system on. This carnival in Chennai had 21,116 NFC cards moving between roughly 60 terminals and 54 stalls. The terminals worked online when they could and offline when they had to, while the top-up zones stayed connected.",
         "Each card carried a user ID, balance, transaction counter, its last three transactions and a previous copy of its own state. We packed that into binary and encrypted it with AES. A transaction only counted after the terminal wrote the new state to the card and read it back successfully. Sequence numbers and IDs derived from the device, card and timestamp gave the server enough context to reconcile transactions later.",
