@@ -341,7 +341,7 @@ class Component extends DCLogic {
       kind: "Product engineering",
       year: "2023-present",
       paragraphs: [
-        "When I joined Extraa, it was a feedback and rewards product built as a monolithic PHP/Yii application. Everything lived in one codebase, and many of the programme rules were hard-coded. That made sense for the product it had originally been built to support, but it became harder to adapt as the company started exploring different kinds of rewards, loyalty and payment programmes.",
+        "I am the CTO at Extraa. When I joined, it was a feedback and rewards product built as a monolithic PHP/Yii application. Everything lived in one codebase, and many of the programme rules were hard-coded. That made sense for the product it had originally been built to support, but it became harder to adapt as the company started exploring different kinds of rewards, loyalty and payment programmes.",
         "I worked through the whole rebuild: figuring out what the new platform needed to do, designing the architecture, writing the core implementation and handling the migration. Campaign rules, coupons, cashback, interfaces and branding became configurable instead of needing a separate version of the platform each time.",
         "Not long after, a campus EV shuttle operator needed NFC travel passes, card issuing, administration and a separate white-labelled customer platform. We delivered the whole thing in about a week. It now serves more than 300 students and has recorded over 10,000 rides."
       ]
@@ -549,11 +549,10 @@ class Component extends DCLogic {
     const u = { tex: U("u_tex"), time: U("u_time"), decay: U("u_decay"), px: U("u_px"), mouse: U("u_mouse"), fit: U("u_fit"), ink: U("u_ink"), a1: U("u_a1"), a2: U("u_a2"), a3: U("u_a3") };
 
     const hex = h => [parseInt(h.slice(1, 3), 16) / 255, parseInt(h.slice(3, 5), 16) / 255, parseInt(h.slice(5, 7), 16) / 255];
-    const accent = this.props.accent || "#E0197C";
     gl.uniform3fv(u.ink, hex("#12100E"));
-    gl.uniform3fv(u.a1, hex(accent));
-    gl.uniform3fv(u.a2, hex("#1B4FE0"));
-    gl.uniform3fv(u.a3, hex("#0F8A4B"));
+    gl.uniform3fv(u.a1, hex("#FF1683"));
+    gl.uniform3fv(u.a2, hex("#145CFF"));
+    gl.uniform3fv(u.a3, hex("#00B86B"));
     gl.uniform1f(u.px, 150.0);
 
     const loadTex = (unit, src) => {
@@ -698,15 +697,16 @@ class Component extends DCLogic {
       ctx.fillStyle = "#12100E";
       ctx.fillRect(0, 0, width, height);
 
-      const time = reduced ? 0 : (now - startedAt) / 1000;
+      const timestamp = Number.isFinite(now) ? now : performance.now();
+      const time = reduced ? 0 : Math.max(0, (timestamp - startedAt) / 1000);
       const duration = 2.8;
       const step = Math.floor(time / duration) % sequence.length;
       const local = time / duration - Math.floor(time / duration);
       const amount = local < 0.2 ? 0 : local > 0.82 ? 1 : smooth((local - 0.2) / 0.62);
-      const fromName = sequence[step];
-      const toName = sequence[(step + 1) % sequence.length];
-      const from = shapes[fromName];
-      const to = shapes[toName];
+      const fromName = sequence[step] || "wave";
+      const toName = sequence[(step + 1) % sequence.length] || "wave";
+      const from = shapes[fromName] || shapes.wave;
+      const to = shapes[toName] || shapes.wave;
       const turn = time * 0.22;
       const cy = Math.cos(turn), sy = Math.sin(turn);
       const cx = Math.cos(-0.28), sx = Math.sin(-0.28);
