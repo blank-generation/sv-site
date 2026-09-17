@@ -104,15 +104,26 @@
   .sv-td-cta { display:inline-block;margin-top:28px;padding:12px 16px;border:1px solid rgba(237,235,227,.72);color:#EDEBE3;font:16px 'VT323',monospace;letter-spacing:.08em;text-transform:uppercase;transition:background .18s ease,color .18s ease,transform .18s ease; }
   .sv-td-cta:hover { background:#E0197C;color:#EDEBE3;border-color:#E0197C; }
   .sv-td-cta:active { transform:translateY(1px); }
-  .sv-about-stack { display:grid;grid-template-rows:auto auto;padding:0 !important; }
-  .sv-about-cell { padding:clamp(28px,4vw,52px) clamp(20px,4vw,56px); }
-  .sv-about-cell + .sv-about-cell { border-top:1px solid rgba(18,16,14,.28); }
+  .sv-meld { background:#12100E;color:#EDEBE3;border-bottom:1px solid rgba(237,235,227,.28); }
+  .sv-meld-grid { display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);min-height:clamp(600px,75vh,820px); }
+  .sv-meld-stage { position:relative;min-width:0;overflow:hidden;border-right:1px solid rgba(237,235,227,.28);isolation:isolate; }
+  .sv-meld-fallback { position:absolute;left:50%;top:50%;width:min(72%,650px);height:auto;transform:translate(-50%,-50%); }
+  .sv-meld-canvas { position:absolute;inset:0;z-index:1;width:100%;height:100%;display:block;touch-action:pan-y; }
+  .sv-meld-stage::after { content:'';position:absolute;inset:0;z-index:2;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(237,235,227,.04) 0 1px,transparent 1px 5px); }
+  .sv-meld-copy { padding:clamp(36px,5vw,72px) clamp(20px,4vw,56px);display:flex;flex-direction:column;justify-content:space-between;gap:48px; }
+  .sv-meld-title { margin:0;font-family:'Geist Pixel',monospace;font-size:clamp(58px,8vw,126px);line-height:.82;font-weight:400;text-transform:uppercase; }
+  .sv-meld-meta { margin-top:20px;color:#AAA69C;font:14px 'VT323',monospace;letter-spacing:.09em;text-transform:uppercase; }
+  .sv-meld-body { display:flex;flex-direction:column;gap:16px; }
+  .sv-meld-body p { margin:0;color:#DAD6C9;font-size:17px;line-height:1.55;text-wrap:pretty; }
+  .sv-meld-cta { align-self:flex-start;padding:12px 16px;border:1px solid rgba(237,235,227,.72);color:#EDEBE3;font:16px 'VT323',monospace;letter-spacing:.08em;text-transform:uppercase;transition:background .18s ease,color .18s ease,transform .18s ease; }
+  .sv-meld-cta:hover { background:#E0197C;color:#EDEBE3;border-color:#E0197C; }
+  .sv-meld-cta:active { transform:translateY(1px); }
   @media (max-width:760px) {
     .sv-topbar { top:8px;width:calc(100% - 16px);min-height:44px;margin:8px auto;grid-template-columns:46px minmax(0,1fr);box-shadow:3px 3px 0 #12100E;font-size:12px; }
     .sv-mark { min-width:46px;padding:0;font-size:16px; }
     .sv-nav { display:grid;grid-template-columns:repeat(3,minmax(0,1fr)); }
     .sv-nav a { padding:10px 5px;line-height:1.05;text-align:center; }
-    .sv-nav a:nth-child(1),.sv-nav a:nth-child(4) { display:none; }
+    .sv-nav-hide-mobile { display:none !important; }
     .sv-work-grid { grid-template-columns:1fr; }
     .sv-case--seven,.sv-case--five,.sv-case--wide,.sv-creative-grid .sv-case--wide { grid-column:1;display:block; }
     .sv-case--wide .sv-case-heading { border-right:0;border-bottom:1px solid rgba(18,16,14,.28); }
@@ -120,8 +131,8 @@
     .sv-work-visual { min-height:240px; }
     .sv-stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
     .sv-status { grid-template-columns:1fr; }
-    .sv-process-stage { min-height:720px; }
-    .sv-process-stage::after { background:linear-gradient(180deg,rgba(18,16,14,.94) 0,rgba(18,16,14,.62) 38%,transparent 68%); }
+    .sv-process-stage { min-height:610px; }
+    .sv-process-stage::after { background:linear-gradient(180deg,rgba(18,16,14,.96) 0,rgba(18,16,14,.68) 43%,transparent 66%); }
     .sv-process-copy { top:32px;left:20px;width:calc(100% - 40px); }
     .sv-split-copy { border-left:0 !important;border-top:1px solid #12100E; }
     .sv-small-grid { grid-template-columns:1fr; }
@@ -135,6 +146,10 @@
     .sv-td::after { background:linear-gradient(180deg,rgba(31,27,48,.48) 0,rgba(31,27,48,.2) 42%,rgba(31,27,48,.94) 72%); }
     .sv-td-copy { width:100%;padding:36px 20px 42px;justify-content:flex-end; }
     .sv-td-title { font-size:clamp(42px,15vw,72px); }
+    .sv-meld-grid { grid-template-columns:1fr;min-height:0; }
+    .sv-meld-stage { min-height:430px;border-right:0;border-bottom:1px solid rgba(237,235,227,.28); }
+    .sv-meld-copy { min-height:480px;padding:36px 20px 42px; }
+    .sv-meld-title { font-size:clamp(58px,22vw,92px); }
   }
   @media (prefers-reduced-motion:reduce) {
     html { scroll-behavior:auto; }
@@ -148,10 +163,11 @@
   <header class="sv-topbar">
     <a class="sv-mark" href="#" aria-label="Back to top">SV<span>/</span></a>
     <nav class="sv-nav" aria-label="Primary navigation">
-      <a href="#practice">Practice</a>
+      <a class="sv-nav-hide-mobile" href="#practice">Practice</a>
       <a href="#work">Work</a>
-      <a href="#play">Small things</a>
-      <a href="#sound">Sound</a>
+      <a href="#meld">Meld</a>
+      <a class="sv-nav-hide-mobile" href="#play">Small things</a>
+      <a class="sv-nav-hide-mobile" href="#sound">Sound</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -244,6 +260,26 @@
     </div>
   </section>
 
+  <section id="meld" class="sv-meld" aria-labelledby="meld-title">
+    <div class="sv-meld-grid">
+      <div class="sv-meld-stage">
+        <img class="sv-meld-fallback" src="./media/meld2.png" alt="" aria-hidden="true">
+        <canvas class="sv-meld-canvas" ref="{{ meldRef }}" role="img" aria-label="The Meld wordmark repeats and shifts through a field of moving rings"></canvas>
+      </div>
+      <div class="sv-meld-copy">
+        <div>
+          <h2 class="sv-meld-title" id="meld-title">Meld</h2>
+          <div class="sv-meld-meta">Co-founder / web development / 2019-present</div>
+        </div>
+        <div class="sv-meld-body">
+          <p>I co-founded Meld and led web development across the studio's identity and digital work. It was a very frontend-focused role. Designers are hard to please, so the job was often about turning an ambitious visual system into a responsive, usable website without flattening what made it distinct.</p>
+          <p>I worked with WordPress and Shopify a lot, alongside good old HTML, CSS and JavaScript. More custom builds brought in Three.js, p5.js, GSAP and, occasionally, Astro. Many of the interfaces I am proudest of came from that work, and I still consult with the team.</p>
+          <a class="sv-meld-cta" href="https://itsmeld.com/" target="_blank" rel="noopener">Visit Meld ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="play" style="background:#12100E;color:#EDEBE3;border-bottom:1px solid rgba(237,235,227,.28)">
     <div class="sv-small-grid">
       <div class="sv-small-visual">
@@ -301,15 +337,9 @@
       <h3 style="margin:0 0 16px;font-family:'Geist Pixel',monospace;font-size:clamp(22px,2.2vw,30px);font-weight:400">Under the hood</h3>
       <p style="margin:0;font-size:18px;line-height:1.55;text-wrap:pretty">I work mostly with TypeScript, Python, Go, React, PostgreSQL and AWS. The live systems tend to involve C++, openFrameworks, OPENRNDR, Unity, GLSL shaders, ESP32s, sensors, OSC and display hardware.</p>
     </div>
-    <div class="sv-split-copy sv-about-stack" style="border-left:1px solid #12100E;min-width:0">
-      <div class="sv-about-cell">
-        <h3 style="margin:0 0 16px;font-family:'Geist Pixel',monospace;font-size:clamp(22px,2.2vw,30px);font-weight:400">Meld</h3>
-        <p style="margin:0;font-size:18px;line-height:1.55;text-wrap:pretty">I co-founded <a href="https://itsmeld.com/" target="_blank" rel="noopener" style="border-bottom:1px solid #E0197C">Meld</a>, a Chennai-based brand design studio working across identity, packaging and digital experiences. I still consult with the team.</p>
-      </div>
-      <div class="sv-about-cell">
-        <h3 style="margin:0 0 16px;font-family:'Geist Pixel',monospace;font-size:clamp(22px,2.2vw,30px);font-weight:400">The longer version</h3>
-        <p style="margin:0;font-size:18px;line-height:1.55;text-wrap:pretty">If you want dates, job history and the full list of tools, they are all in my <a href="./media/Srinivas_Vijayakumar_CV.pdf" target="_blank" rel="noopener" style="border-bottom:1px solid #E0197C">CV</a>. On this page, I stuck to the work I actually wanted to talk about.</p>
-      </div>
+    <div class="sv-split-copy" style="border-left:1px solid #12100E;min-width:0;padding:clamp(28px,4vw,52px) clamp(20px,4vw,56px)">
+      <h3 style="margin:0 0 16px;font-family:'Geist Pixel',monospace;font-size:clamp(22px,2.2vw,30px);font-weight:400">The longer version</h3>
+      <p style="margin:0;font-size:18px;line-height:1.55;text-wrap:pretty">If you want dates, job history and the full list of tools, they are all in my <a href="./media/Srinivas_Vijayakumar_CV.pdf" target="_blank" rel="noopener" style="border-bottom:1px solid #E0197C">CV</a>. On this page, I stuck to the work I actually wanted to talk about.</p>
     </div>
   </section>
 
@@ -407,6 +437,7 @@ class Component extends DCLogic {
   processRef = React.createRef();
   fgrRef = React.createRef();
   tdRef = React.createRef();
+  meldRef = React.createRef();
 
   // Loop state lives on the canvas ELEMENT (canvas.__dust), not on this instance,
   // so any instance that finds a canvas without a live loop can start or heal one.
@@ -443,6 +474,7 @@ class Component extends DCLogic {
     this.initProcessCanvas(this.processRef.current);
     this.initFgrCanvas(this.fgrRef.current);
     this.initTelevisionDust(this.tdRef.current);
+    this.initMeldCanvas(this.meldRef.current);
   }
 
   componentWillUnmount() {
@@ -473,6 +505,15 @@ class Component extends DCLogic {
       if (td.__td.resizeObserver) td.__td.resizeObserver.disconnect();
       if (td.__td.move) td.removeEventListener("pointermove", td.__td.move);
       if (td.__td.leave) td.removeEventListener("pointerleave", td.__td.leave);
+    }
+    const meld = this.meldRef.current;
+    if (meld && meld.__meld) {
+      meld.__meld.dead = true;
+      cancelAnimationFrame(meld.__meld.raf);
+      if (meld.__meld.observer) meld.__meld.observer.disconnect();
+      if (meld.__meld.resizeObserver) meld.__meld.resizeObserver.disconnect();
+      if (meld.__meld.move) meld.removeEventListener("pointermove", meld.__meld.move);
+      if (meld.__meld.leave) meld.removeEventListener("pointerleave", meld.__meld.leave);
     }
   }
 
@@ -710,7 +751,9 @@ class Component extends DCLogic {
       const turn = time * 0.22;
       const cy = Math.cos(turn), sy = Math.sin(turn);
       const cx = Math.cos(-0.28), sx = Math.sin(-0.28);
-      const scale = Math.min(width, height) * 0.34;
+      const mobile = canvas.clientWidth <= 760;
+      const scale = Math.min(width, height) * (mobile ? 0.43 : 0.34);
+      const centreY = height * (mobile ? 0.69 : 0.5);
 
       for (let i = 0; i < count; i++) {
         const j = i * 3;
@@ -727,8 +770,8 @@ class Component extends DCLogic {
         const rz = y * sx + rz0 * cx;
         const perspective = 4.4 / Math.max(1.4, 4.4 - rz);
         const px = width * 0.5 + rx * scale * perspective;
-        const py = height * 0.5 - ry * scale * perspective;
-        const size = Math.max(1.5, 2.4 * dpr * perspective);
+        const py = centreY - ry * scale * perspective;
+        const size = Math.max(1.5, (mobile ? 3.1 : 2.4) * dpr * perspective);
         ctx.fillStyle = i % 17 === 0 ? "#E0197C" : "rgba(237,235,227," + Math.min(0.92, 0.38 + perspective * 0.36) + ")";
         ctx.fillRect(px, py, size, size);
       }
@@ -941,6 +984,145 @@ class Component extends DCLogic {
     frame(performance.now());
   }
 
+  initMeldCanvas(canvas) {
+    if (!canvas || canvas.__meld) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const st = { dead: false, visible: true, raf: 0, pointer: [.5, .5], eased: [.5, .5] };
+    canvas.__meld = st;
+    const filled = new Image();
+    const outline = new Image();
+    const startedAt = performance.now();
+
+    const drawImage = (image, x, y, width, alpha, filter) => {
+      if (!image.complete || !image.naturalWidth) return;
+      const height = width * image.naturalHeight / image.naturalWidth;
+      ctx.save();
+      ctx.globalAlpha = alpha;
+      ctx.filter = filter || "none";
+      ctx.drawImage(image, x - width / 2, y - height / 2, width, height);
+      ctx.restore();
+    };
+
+    const drawLayer = (image, x, y, width, rotationX, rotationY, alpha, filter) => {
+      const cosX = Math.cos(rotationX);
+      const sinX = Math.sin(rotationX);
+      const cosY = Math.cos(rotationY);
+      const sinY = Math.sin(rotationY);
+      ctx.save();
+      ctx.translate(x, y);
+      // Project both axes and add a small perspective shear so the plane turns
+      // toward the pointer instead of reading as a simple width/height stretch.
+      ctx.transform(cosY, sinX * .22 + sinX * sinY, -sinY * .22, cosX, 0, 0);
+      drawImage(image, 0, 0, width, alpha, filter);
+      ctx.restore();
+    };
+
+    const draw = now => {
+      if (st.dead || canvas.__meld !== st || !document.contains(canvas)) return;
+      const dpr = Math.min(1.5, window.devicePixelRatio || 1);
+      const width = Math.max(1, canvas.clientWidth);
+      const height = Math.max(1, canvas.clientHeight);
+      const pixelWidth = Math.max(1, Math.floor(width * dpr));
+      const pixelHeight = Math.max(1, Math.floor(height * dpr));
+      if (canvas.width !== pixelWidth || canvas.height !== pixelHeight) {
+        canvas.width = pixelWidth;
+        canvas.height = pixelHeight;
+      }
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.fillStyle = "#12100E";
+      ctx.fillRect(0, 0, width, height);
+
+      st.eased[0] += (st.pointer[0] - st.eased[0]) * .055;
+      st.eased[1] += (st.pointer[1] - st.eased[1]) * .055;
+      const timestamp = Number.isFinite(now) ? now : performance.now();
+      const time = reduced ? 0 : (timestamp - startedAt) / 1000;
+      const shortSide = Math.min(width, height);
+      const ringX = width * (.5 + Math.sin(time * .37) * .17 + (st.eased[0] - .5) * .18);
+      const ringY = height * (.5 + Math.cos(time * .29) * .15 + (st.eased[1] - .5) * .14);
+      ctx.lineWidth = Math.max(1, 1.35 * dpr) / dpr;
+      for (let i = 1; i < 15; i++) {
+        const radius = i * shortSide * .105 + Math.sin(time * .8 + i * .7) * 7;
+        ctx.beginPath();
+        ctx.ellipse(ringX, ringY, radius, radius * (.76 + Math.sin(time * .22) * .08), time * .04, 0, Math.PI * 2);
+        ctx.strokeStyle = i % 5 === 0 ? "rgba(224,25,124,.62)" : "rgba(237,235,227," + Math.max(.08, .42 - i * .021) + ")";
+        ctx.stroke();
+      }
+
+      const logoWidth = Math.min(width * .72, 650);
+      const rotationY = (st.eased[0] - .5) * 1.05 + Math.sin(time / 3) * .16;
+      const rotationX = (.5 - st.eased[1]) * .82;
+      const layers = Math.max(0, Math.min(7, Math.floor(st.eased[0] * 8)));
+      const cameraZ = Math.max(440, height * .866);
+      const zStep = Math.min(100, cameraZ / 6);
+      const yStep = Math.min(80, height * .105);
+      const project = z => Math.min(3.8, cameraZ / Math.max(cameraZ - z, cameraZ / 3.8));
+
+      // The lower stack recedes into the screen, as in the original p5 WEBGL sketch.
+      for (let i = layers - 1; i >= 1; i--) {
+        const perspective = project(-i * zStep);
+        drawLayer(
+          outline,
+          width / 2 + i * 4 * perspective,
+          height / 2 + i * yStep * perspective,
+          logoWidth * perspective,
+          rotationX,
+          rotationY,
+          Math.max(.12, .46 - i * .04),
+          "invert(1)"
+        );
+      }
+
+      drawLayer(filled, width / 2, height / 2, logoWidth, rotationX, rotationY, 1);
+
+      // The upper stack moves toward the camera, quickly growing past the frame.
+      for (let i = 1; i < layers - 1; i++) {
+        const perspective = project(i * zStep);
+        drawLayer(
+          outline,
+          width / 2 + i * 4 * perspective,
+          height / 2 - i * yStep * perspective,
+          logoWidth * perspective,
+          rotationX,
+          rotationY,
+          Math.max(.14, .5 - i * .038),
+          "invert(1)"
+        );
+      }
+    };
+
+    const frame = now => {
+      if (st.dead) return;
+      if (st.visible) draw(now);
+      if (!reduced) st.raf = requestAnimationFrame(frame);
+    };
+    st.draw = () => draw(performance.now());
+    st.move = event => {
+      const rect = canvas.getBoundingClientRect();
+      st.pointer = [
+        Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width)),
+        Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height))
+      ];
+    };
+    st.leave = () => { st.pointer = [.5, .5]; };
+    canvas.addEventListener("pointermove", st.move, { passive: true });
+    canvas.addEventListener("pointerleave", st.leave, { passive: true });
+    filled.onload = st.draw;
+    outline.onload = st.draw;
+    filled.src = "./media/meld2.png";
+    outline.src = "./media/meldo.png";
+    if ("IntersectionObserver" in window) {
+      st.observer = new IntersectionObserver(entries => { st.visible = entries[0].isIntersecting; });
+      st.observer.observe(canvas);
+    }
+    if ("ResizeObserver" in window) {
+      st.resizeObserver = new ResizeObserver(() => st.draw());
+      st.resizeObserver.observe(canvas);
+    }
+    frame(performance.now());
+  }
+
   initFgrCanvas(canvas) {
     if (!canvas || canvas.__fgr) return;
     const ctx = canvas.getContext("2d");
@@ -1044,6 +1226,7 @@ class Component extends DCLogic {
       processRef: this.processRef,
       fgrRef: this.fgrRef,
       tdRef: this.tdRef,
+      meldRef: this.meldRef,
       _loop: this.startHealing(),
       stats: [
         { value: "~3.0M", label: "Registered users", color: accent },
